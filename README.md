@@ -11,9 +11,7 @@ It can and:
 You can:
 * Gain insights into quality metrics to track such as call silence, call duration, agent speaking time, user speaking time, and sentence heat maps.
 * Build visualizations reports
-* Examples of what the visualizations you can build:
-
-![Speech Analysis Framework Sentence Heat Map](images/visualize-speech-data-with-framework-5heatmap.png "Speech Analysis Framework Sentence Heat Map")
+* With the data received - you can build a lot of visualizations
 
 Speech Analysis Framework Limitations:
 * The framework can only identify two callers on a stereo or mono audio file. This is a limitation within the Framework code not Cloud Speech-to-Text API.
