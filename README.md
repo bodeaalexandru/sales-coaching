@@ -24,8 +24,6 @@ The process follows:
 4. The Cloud Function then sends the job ID from Cloud Speech-to-Text with additional metadata to Cloud Pub/Sub
 5. The Cloud Dataflow job enriches the data, optionally redacts sensitive information and writes to BigQuery
 
-To Learn More visit [Visualize speech data with Speech Analysis Framework](hhttps://cloud.google.com/solutions/visualize-speech-data-with-framework)
-
 ## How to install the Speech Analysis Framework
 
 1. [Install the Google Cloud SDK](https://cloud.google.com/sdk/install)
@@ -98,6 +96,7 @@ env\Scripts\activate
 pip3 install apache-beam[gcp]
 pip3 install dateparser
 ```
+* If you cannot install the dataparser, download it from its website and install it manually from a tar.gz file
 * The Dataflow job will create the **BigQuery Table** you listed in the parameters.
 * Please wait as it might take a few minutes to complete.
 ``` shell
