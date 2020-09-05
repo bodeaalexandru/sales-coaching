@@ -103,7 +103,7 @@ exports.safLongRunJobFunc = (event, context, callback) => {
 					languageCode: `en-US`,
 					enableAutomaticPunctuation: true,
 					enableSpeakerDiarization: true,
-					diarizationSpeakerCount: 2,
+					diarizationSpeakerCount: 5,
 					enableWordTimeOffsets: true,
 					enableWordConfidence: true,
 					useEnhanced: true,
