@@ -172,5 +172,3 @@ FROM
 WHERE
   (REGEXP_CONTAINS(transcript, '(?i) [YOUR_WORD]' ))
 ```
-
-**This is not an officially supported Google product**
