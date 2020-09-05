@@ -1,0 +1,11 @@
+*.gz
+*.txt
+*.cfg
+*.py
+*.pyc
+*.pem
+*.exe
+*.tmpl
+*.xml
+*.bat
+*.ps1
