@@ -102,8 +102,8 @@ exports.safLongRunJobFunc = (event, context, callback) => {
 					sampleRateHertz: sampleRate, //get value from fluent-ffmpeg
 					languageCode: `en-US`,
 					enableAutomaticPunctuation: true,
-					enableSpeakerDiarization: true,
-					diarizationSpeakerCount: 5,
+					// enableSpeakerDiarization: true,
+					// diarizationSpeakerCount: 5,
 					enableWordTimeOffsets: true,
 					enableWordConfidence: true,
 					useEnhanced: true,
