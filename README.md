@@ -14,8 +14,8 @@ You can:
 * With the data received - you can build a lot of visualizations
 
 Speech Analysis Framework Limitations:
-* The framework can only identify two callers on a stereo or mono audio file. This is a limitation within the Framework code not Cloud Speech-to-Text API.
-* The framework can only process .wav or .flac files. This is a limitation within the Framework code not Cloud Speech-to-Text API.
+* The framework can only identify two callers on a stereo or mono audio file. This is a limitation within the Framework code not Cloud Speech-to-Text API. - TO DO: EXTEND
+* The framework can only process .wav or .flac files. This is a limitation within the Framework code not Cloud Speech-to-Text API. - TO DO: EXTEND
 
 The process follows:
 1. An audio file is uploaded to Cloud Storage
