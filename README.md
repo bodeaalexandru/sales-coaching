@@ -59,7 +59,7 @@ gcloud services enable dataflow
 
 8. Enable Cloud Speech-to-Text API
 ``` shell
-gcloud services enable speech
+gcloud services enable speech.googleapis.com
 ```
 
 9. Enable Cloud Natural Language API
