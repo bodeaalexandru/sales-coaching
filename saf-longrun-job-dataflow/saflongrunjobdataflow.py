@@ -116,18 +116,6 @@ def stt_parse_response(stt_data):
         for element in stt_data[0]['response']['results']:     
             for word in element['alternatives'][0]['words']:
                 total_speaking_time += float(word['endTime'].strip('s')) - float(word['startTime'].strip('s'))
-                if element['channelTag'] == speaker_one_tag:
-                    total_speaker_one_speaking += float(word['endTime'].strip('s')) - float(word['startTime'].strip('s')) 
-                    parse_stt_output_response['words'].append(
-                        {'word': word['word'], 'startsecs': word['startTime'].strip('s'),
-                         'endsecs': word['endTime'].strip('s'), 'speakertag': element['channelTag'],
-                         'confidence': word['confidence']})
-                if element['channelTag'] == speaker_two_tag:       
-                    total_speaker_two_speaking += float(word['endTime'].strip('s')) - float(word['startTime'].strip('s'))
-                    parse_stt_output_response['words'].append(
-                        {'word': word['word'], 'startsecs': word['startTime'].strip('s'),
-                         'endsecs': word['endTime'].strip('s'), 'speakertag': element['channelTag'],
-                         'confidence': word['confidence']})
         stt_start_time = float(stt_data[0]['response']['results'][0]['alternatives'][0]['words'][0]['startTime'].strip('s'))
         stt_end_time = float(stt_data[0]['response']['results'][-1]['alternatives'][0]['words'][-1]['endTime'].strip('s'))
         parse_stt_output_response['silencesecs'] =  float(
@@ -141,14 +129,6 @@ def stt_parse_response(stt_data):
         # get words from stt_data and enrich data
         for element in stt_data[0]['response']['results'][-1]['alternatives'][0]['words']:
             total_speaking_time += float(element['endTime'].strip('s')) - float(element['startTime'].strip('s'))
-            if element['speakerTag'] == speaker_one_tag:
-                total_speaker_one_speaking += float(element['endTime'].strip('s')) - float(element['startTime'].strip('s'))
-            if element['speakerTag'] == speaker_two_tag:
-                total_speaker_two_speaking += float(element['endTime'].strip('s')) - float(element['startTime'].strip('s'))
-            parse_stt_output_response['words'].append(
-                {'word': element['word'], 'startsecs': element['startTime'].strip('s'),
-                 'endsecs': element['endTime'].strip('s'), 'speakertag': element['speakerTag'],
-                 'confidence': element['confidence']})
         stt_start_time = float(stt_data[0]['response']['results'][-1]['alternatives'][0]['words']
             [0]['startTime'].strip('s'))
         stt_end_time = float(stt_data[0]['response']['results'][-1]['alternatives'][0]['words']
