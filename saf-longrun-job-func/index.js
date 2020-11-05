@@ -108,6 +108,7 @@ exports.safLongRunJobFunc = (event, context, callback) => {
 
 			let pubSubObj = {
 				'fileid': uniqid.time(),
+				'dlp': file.metadata.dlp === undefined ? 'undefined' : file.metadata.dlp
 				'filename': `gs://${file.bucket}/${file.name}`,
 				'callid': file.metadata.callid === undefined ? 'undefined' : file.metadata.callid,
 				'date': Date(Date.now()),
